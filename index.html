@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111414">
+  <meta name="description" content="Find your next campus gathering. Browse, book, and make room for what brings us together.">
+  <title>Gather — Campus Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Gather home"><span class="brand-mark" aria-hidden="true">門</span><span>gather<span class="brand-dot">.</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-link is-active" href="#events">Discover</a>
+      <a class="nav-link" href="#about">Our campus</a>
+      <a class="nav-link" href="#events">Calendar</a>
+    </nav>
+    <div class="header-actions">
+      <span class="term-label"><i></i> Autumn semester</span>
+      <button class="button button-quiet organizer-trigger" type="button">Organizer</button>
+      <button class="avatar" type="button" aria-label="Student profile">S</button>
+    </div>
+    <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true">
+        <div class="moon"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="temple"><div class="roof roof-upper"></div><div class="temple-upper"><i></i><i></i><i></i><i></i><i></i></div><div class="roof roof-lower"></div><div class="temple-base"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="doorway"></div></div>
+        <div class="torii"><span></span><i></i><b></b></div>
+        <div class="grass grass-left"></div><div class="grass grass-right"></div>
+        <div class="firefly f1"></div><div class="firefly f2"></div><div class="firefly f3"></div>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> A CAMPUS IN GOOD COMPANY</div>
+        <h1 id="hero-title">Make room<br>for <em>something</em><br>good.</h1>
+        <p>Small moments make a campus. Find your people, learn something new, or just see what happens.</p>
+        <a class="button button-primary" href="#events">Explore what’s on <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-side-note"><span>01 / 04</span><span>·</span><span>BE HERE, TOGETHER</span></div>
+      <div class="hero-bottom">
+        <div class="hero-index"><span>01</span><span>02</span><span>03</span><span>04</span></div>
+        <a class="scroll-cue" href="#events">SCROLL TO DISCOVER <span></span></a>
+        <div class="hero-caption"><span class="caption-kanji">集</span><span>FIND YOUR<br>GATHERING PLACE</span></div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Campus calendar"><div class="ticker-track"><span>MEET HERE</span><b>✳</b><span>MAKE A LITTLE TIME</span><b>✳</b><span>MEET HERE</span><b>✳</b><span>MAKE A LITTLE TIME</span><b>✳</b><span>MEET HERE</span><b>✳</b><span>MAKE A LITTLE TIME</span><b>✳</b></div></section>
+
+    <section id="events" class="events-section" aria-labelledby="events-title">
+      <div class="section-heading">
+        <div><div class="eyebrow eyebrow-dark"><span class="eyebrow-dot"></span> FIND YOUR NEXT THING</div><h2 id="events-title">Good things<br><em>are gathering.</em></h2></div>
+        <p class="section-intro">A workshop, a late-night film, a seat at the table. Your next favorite campus memory is closer than you think.</p>
+      </div>
+      <div class="event-toolbar">
+        <div class="filter-list" role="group" aria-label="Filter events">
+          <button class="filter-chip is-selected" data-filter="all" type="button">All events <span id="all-count">00</span></button>
+          <button class="filter-chip" data-filter="Arts" type="button">Arts</button>
+          <button class="filter-chip" data-filter="Learning" type="button">Learning</button>
+          <button class="filter-chip" data-filter="Community" type="button">Community</button>
+          <button class="filter-chip" data-filter="Wellness" type="button">Wellness</button>
+        </div>
+        <label class="search-box"><span aria-hidden="true">⌕</span><input id="event-search" type="search" placeholder="Find an event" aria-label="Search events"></label>
+      </div>
+      <div id="event-grid" class="event-grid" aria-live="polite"></div>
+      <div id="empty-state" class="empty-state" hidden><span>Nothing on this path just yet.</span><button class="text-button" id="clear-filters" type="button">Clear filters ↗</button></div>
+    </section>
+
+    <section id="about" class="manifesto">
+      <div class="manifesto-art" aria-hidden="true"><div class="manifesto-moon"></div><div class="manifesto-gate"><i></i><b></b></div><span class="vertical-note">THE CAMPUS IS YOURS</span></div>
+      <div class="manifesto-copy"><div class="eyebrow"><span class="eyebrow-dot"></span> A PLACE TO BEGIN</div><h2>There’s more<br>to campus than<br><em>the classroom.</em></h2><p>Gather is a shared front door to the things happening around us. Come curious. Leave with a story.</p><a class="text-link" href="#events">See what’s happening <span>↗</span></a></div>
+    </section>
+
+    <section class="closing"><div class="closing-stamp">G<br>✳<br>C</div><p>Make the<br>ordinary <em>memorable.</em></p><a class="button button-outline" href="#events">Find your next thing <span>↗</span></a><span class="closing-kanji" aria-hidden="true">縁</span></section>
+  </main>
+
+  <footer class="footer"><a class="brand brand-footer" href="#top"><span class="brand-mark" aria-hidden="true">門</span><span>gather<span class="brand-dot">.</span></span></a><span>Made for the moments between classes.</span><span>© 2026 Gather Campus</span></footer>
+
+  <dialog id="event-dialog" class="modal event-modal"><form method="dialog"><button class="modal-close" aria-label="Close">×</button></form><div id="event-detail"></div></dialog>
+  <dialog id="organizer-dialog" class="modal organizer-modal"><form method="dialog"><button class="modal-close" aria-label="Close">×</button></form><div class="modal-kicker">GATHER / ORGANIZER</div><h2>Shape what’s<br><em>happening.</em></h2><p class="modal-lede">Create an event for the campus calendar. Changes are saved in this browser.</p><form id="event-form" class="organizer-form">
+    <input type="hidden" id="event-id">
+    <label>Event name<input id="event-title" name="title" required maxlength="80" placeholder="e.g. Printmaking after dark"></label>
+    <div class="form-row"><label>Category<select id="event-category" name="category"><option>Arts</option><option>Learning</option><option>Community</option><option>Wellness</option></select></label><label>Date<input id="event-date" name="date" type="date" required></label></div>
+    <div class="form-row"><label>Start time<input id="event-time" name="time" type="time" required></label><label>Seats<input id="event-capacity" name="capacity" type="number" min="1" max="5000" required value="30"></label></div>
+    <label>Location<input id="event-location" name="location" required maxlength="80" placeholder="Building and room"></label>
+    <label>Short description<textarea id="event-description" name="description" rows="3" maxlength="240" required placeholder="What should students know?"></textarea></label>
+    <div class="form-actions"><button class="button button-primary" type="submit">Save event <span>↗</span></button><button id="reset-demo" class="text-button" type="button">Reset demo events</button></div>
+  </form><div class="organizer-list-wrap"><h3>Current events</h3><div id="organizer-list" class="organizer-list"></div></div></dialog>
+  <dialog id="confirmation-dialog" class="modal confirmation-modal"><form method="dialog"><button class="modal-close" aria-label="Close">×</button></form><div id="confirmation-content"></div></dialog>
+</body>
+</html>
